@@ -113,6 +113,7 @@
             NSLog(@"Connected to FCM.");
             NSString *refreshedToken = [[FIRInstanceID instanceID] token];
             NSLog(@"InstanceID token: %@", refreshedToken);
+            [[UIApplication sharedApplication] registerForRemoteNotifications];
         }
     }];
 }
